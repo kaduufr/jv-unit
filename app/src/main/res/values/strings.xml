@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Jardim Viver</string>
+    <string name="age">Idade</string>
+    <string name="name">Nome</string>
+    <string name="form">Formulario</string>
+    <string name="surname">Sobrenome</string>
+    <string name="email">E-mail</string>
+    <string name="address">Endereço</string>
+    <string name="register">Cadastrar</string>
+    <string name="help_name">Obs: No minimo 3 caracteres</string>
+    <string name="help_surname">Obs: No minimo 3 caracteres</string>
+    <string name="help_email">Ex: teste@gmail.com</string>
+    <string name="help_address">Ex: Rua das Garças, 123</string>
+    <string name="float_button_description">Button to go to New Parent Screen</string>
+</resources>

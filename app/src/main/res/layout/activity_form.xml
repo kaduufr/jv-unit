@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".FormActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-black"
+                android:freezesText="false"
+                android:gravity="center"
+                android:text="@string/form"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/inputName"
+                    android:layout_width="320dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="clientName"
+                    android:background="@drawable/rounded_edittext"
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/textHelperName"
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_name"
+                    android:textColor="#B1B1B1"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/inputSurname"
+                    android:layout_width="320dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="clientSurname"
+                    android:background="@drawable/rounded_edittext"
+                    android:ems="10"
+                    android:hint="@string/surname"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/textHelperSurname"
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_surname"
+                    android:textColor="#B1B1B1"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="320dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="clientEmail"
+                    android:background="@drawable/rounded_edittext"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="text|textEmailSubject" />
+
+                <TextView
+                    android:id="@+id/textHelperEmail"
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_email"
+                    android:textColor="#B1B1B1"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/inputAge"
+                    android:layout_width="320dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="clientAge"
+                    android:background="@drawable/rounded_edittext"
+                    android:ems="10"
+                    android:hint="@string/age"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/inputAddress"
+                    android:layout_width="320dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="clientAddress"
+                    android:background="@drawable/rounded_edittext"
+                    android:ems="10"
+                    android:hint="@string/address"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/textHelperAddress"
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help_address"
+                    android:textColor="#B1B1B1"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_button"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
