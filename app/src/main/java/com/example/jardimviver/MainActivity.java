@@ -7,9 +7,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.jardimviver.adapters.AdapterParents;
 import com.example.jardimviver.constants.ConstantsDB;
 import com.example.jardimviver.dto.ParentDTO;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     listParents = findViewById(R.id.listViewParents);
 
     createDatabase();
-    btnAddParent.setOnClickListener(btnAddParentAction);
     listParents();
+    btnAddParent.setOnClickListener(btnAddParentAction);
   }
 
   View.OnClickListener btnAddParentAction = view -> {
@@ -50,15 +50,13 @@ public class MainActivity extends AppCompatActivity {
       error.printStackTrace();
     }
   }
-// Todo: Criar adapter para a lista de pais
   private void listParents() {
     try {
       Cursor data = database.rawQuery("SELECT * FROM parents", null);
-      ArrayList<ParentDTO> clients = new ArrayList<ParentDTO>();
-      ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-      listParents.setAdapter(adapter);
+      ArrayList<ParentDTO> clients = new ArrayList<>();
+      AdapterParents adapter = new AdapterParents(clients, this);
       data.moveToFirst();
-      while (data.moveToNext()) {
+      do {
         ParentDTO client = new ParentDTO(
             data.getString(1),
             data.getString(2),
@@ -67,8 +65,11 @@ public class MainActivity extends AppCompatActivity {
             data.getInt(5)
         );
         clients.add(client);
-      }
+      } while (data.moveToNext());
 
+      System.out.println(clients);
+
+      listParents.setAdapter(adapter);
 
       data.close();
     } catch (Exception error) {

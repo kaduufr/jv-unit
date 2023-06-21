@@ -25,4 +25,27 @@ public class ParentDTO {
     public String toString() {
         return this.name + " " + this.surname;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public String getSigla() { return name.substring(0, 1).toUpperCase() + surname.substring(0, 1).toUpperCase(); }
+
 }
